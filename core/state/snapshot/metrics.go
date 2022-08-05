@@ -16,7 +16,7 @@
 
 package snapshot
 
-import "github.com/ethereum/go-ethereum/metrics"
+import "github.com/Rxbbn/PHXGeth/metrics"
 
 // Metrics in generation
 var (

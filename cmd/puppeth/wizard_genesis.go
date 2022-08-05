@@ -28,10 +28,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/Rxbbn/PHXGeth/common"
+	"github.com/Rxbbn/PHXGeth/core"
+	"github.com/Rxbbn/PHXGeth/log"
+	"github.com/Rxbbn/PHXGeth/params"
 )
 
 // makeGenesis creates a new genesis struct based on some user input.

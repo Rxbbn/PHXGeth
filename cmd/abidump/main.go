@@ -23,8 +23,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/ethereum/go-ethereum/signer/fourbyte"
+	"github.com/Rxbbn/PHXGeth/signer/core/apitypes"
+	"github.com/Rxbbn/PHXGeth/signer/fourbyte"
 )
 
 func init() {
