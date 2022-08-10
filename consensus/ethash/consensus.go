@@ -43,6 +43,10 @@ var (
 	ByzantiumBlockReward          = big.NewInt(3e+18) // Block reward in wei for successfully mining a block upward from Byzantium
 	ConstantinopleBlockReward     = big.NewInt(2e+18) // Block reward in wei for successfully mining a block upward from Constantinople
 	LondonBlockReward             = big.NewInt(1e+18) // Block reward in wei for successfully mining a block upward from London
+	IgniteBlockReward             = big.NewInt(5e+17) // Block reward in wei for successfully mining a block upward from Ignite
+	FireBlockReward               = big.NewInt(2.5e+17) // Block reward in wei for successfully mining a block upward from Ignite
+	RiseBlockReward               = big.NewInt(1.25e+17) // Block reward in wei for successfully mining a block upward from Ignite
+	AshesBlockReward              = big.NewInt(6.25e+16) // Block reward in wei for successfully mining a block upward from Ignite
 	maxUncles                     = 2                 // Maximum number of uncles allowed in a single block
 	allowedFutureBlockTimeSeconds = int64(15)         // Max seconds from current time allowed for blocks, before they're considered future blocks
 
@@ -661,6 +665,18 @@ func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header 
 	}
 	if config.IsLondon(header.Number) {
 		blockReward = LondonBlockReward
+	}
+	if config.IsIgnite(header.Number) {
+		blockReward = IgniteBlockReward
+	}
+	if config.IsFire(header.Number) {
+		blockReward = FireBlockReward
+	}
+	if config.IsRise(header.Number) {
+		blockReward = RiseBlockReward
+	}
+	if config.IsAshes(header.Number) {
+		blockReward = AshesBlockReward
 	}
 	// Accumulate the rewards for the miner and any included uncles
 	reward := new(big.Int).Set(blockReward)
